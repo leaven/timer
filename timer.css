@@ -1,0 +1,23 @@
+#counter{
+	font-size: 12px;
+}
+.hour,
+.minute,
+.second{
+	color:#444;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.hour b,
+.minuter b,
+.second b{
+	width:16px;
+	height:18px;
+	font-weight: bold;
+	display: inline-block;
+	color:#666;
+	text-align: center;
+	line-height: 18px;
+	background-size:100% 100%;
+}

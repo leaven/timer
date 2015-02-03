@@ -1,9 +1,39 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>倒计时demo</title>
+	<link rel="stylesheet" href="./timer.css" />
 </head>
 <body>
-	hello,world
+	<div id="counter">
+
+		<span class="hour">
+			<b >0</b>
+			<b >0</b>
+			时
+		</span>
+		<span class="minute">
+			<b >0</b>
+			<b >0</b>
+			分
+		</span>
+		<span class="second">
+			<b >0</b>
+			<b >0</b>
+			秒
+		</span>
+	</div>
+	<script src="./jquery.js"></script>
+	<script src="./timer.js"></script>
+	<script>
+	new Timer({
+		el : $("#counter"),
+		currentTimeSpan : +new Date,
+		targetTimeSpan : new Date(2015, new Date().getMonth(), new Date().getDate()+1, 0,0,0).getTime(),
+		callback : function(){
+			alert("Time is up!");
+		}
+	});
+	</script>
 </body>
 </html>
